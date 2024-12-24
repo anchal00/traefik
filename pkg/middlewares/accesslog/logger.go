@@ -291,7 +291,7 @@ func (h *Handler) Rotate() error {
 	}
 	h.mu.Lock()
 	defer h.mu.Unlock()
-	h.logger.Out = h.file
+	h.logger.SetOutput(h.file)
 	return nil
 }
 
